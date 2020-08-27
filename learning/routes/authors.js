@@ -69,9 +69,19 @@ router.put('/:id', (req, res)=>{
 })
 
 
-router.delete('/:id', (req, res)=>{
+router.delete('/:id', async (req, res)=>{
 
-    res.send('Delete author' + req.params.id)
+    let author = await Author.findById(req.params.id)
+    try{
+        await author.remove()
+        res.redirect('/authors')
+
+    }catch
+    {
+        console.log('Did not delete the record!')
+    }
+
+    //res.send('Delete author' + req.params.id)
 })
 
 
