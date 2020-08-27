@@ -1,0 +1,54 @@
+﻿@model Projekt4.Models.db.news
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+<h3>Är du säker att du vill tabort det?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.information)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.information)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.director)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.director)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.actors)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.actors)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.program.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.program.name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

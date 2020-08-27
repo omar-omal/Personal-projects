@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Projekt4.Models.db.program>
+@{
+    ViewBag.Title = "MinSida";
+
+}
+
+    
+@if (Session["status"] == null)
+{
+        <div class="AddChannels">
+            <input type="button" value="Lägg till favorite kanal" onclick="location.href='@Url.Action("channelList", "Home")'" id="addchannels" />
+        </div>
+}
+else
+{
+    <script type="text/javascript">
+        alert("Du har redan lagt alla kanaler som favorit!")   
+    </script>
+
+}
+<div class="channel-cont">
+    @foreach (int channel in ViewBag.favoritelist)
+    {
+        <div class="list">
+            
+            @if (channel == 1)
+            {
+                <h3 class="channel">SVT1</h3>
+            }
+            else if (channel == 2)
+            {
+                <h3 class="channel">SVT2</h3>
+            }
+            else if (channel == 3)
+            {
+                <h3 class="channel">TV3</h3>
+            }
+            else if (channel == 4)
+            {
+                <h3 class="channel">TV4</h3>
+            }
+            else if (channel == 5)
+            {
+                <h3 class="channel">Kanal5</h3>
+            }
+
+            
+            @foreach (var program in Model)
+            {
+                if (channel == program.channel_id && program.start.Value.Date == DateTime.Now.Date)
+                {
+                    if (program.start.Value.TimeOfDay <= DateTime.Now.TimeOfDay && program.finish.Value.TimeOfDay > DateTime.Now.TimeOfDay)
+                    {
+                        <ul class="channel-list">
+                            <li>
+                                <b><a>@program.start.Value.ToString("HH:mm") @program.name Live</a></b>
+                            </li>
+
+                        </ul>
+                    }
+                    else
+                    {
+
+                        <ul class="channel-list">
+                            <li>
+                                <a>@program.start.Value.ToString("HH:mm") @program.name</a>
+                            </li>
+
+                        </ul>
+                    }
+                }
+            }
+
+
+
+        </div>
+
+    }
+</div>

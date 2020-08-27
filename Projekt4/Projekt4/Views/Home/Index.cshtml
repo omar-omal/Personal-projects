@@ -1,0 +1,253 @@
+﻿@model IEnumerable<Projekt4.Models.db.program>
+@{
+    ViewBag.Title = "Index";
+}
+<div class="today-movie">
+    <p> Veckans mest populära Tv program</p>
+</div>
+<div class="row1">
+    
+       
+            @foreach (var news in ViewBag.newslist)
+            {
+                      <div class="news-cont">
+                   @foreach (var program in Model)
+                   {
+
+                              if (news.channel_id == program.id)
+                               {
+                                    <h2>@program.name</h2>   
+                                    <p>@news.information</p>
+                                    <h2 class="date-styling">@program.start.Value.ToString("dd-MMM")</h2>
+                               }
+                   }
+
+               </div>
+            }
+        
+        
+       
+    
+</div>
+<div id="Navigator">
+    <button  class="tabbutton" onclick="openchannel('day1', this)" id="defaultOpen">Idag </button>
+    <button  class="tabbutton" onclick="openchannel('day2', this)">@DateTime.Today.AddDays(1).Day/@DateTime.Today.Month</button>
+    <button  class="tabbutton" onclick="openchannel('day3', this)">@DateTime.Today.AddDays(2).Day/@DateTime.Today.Month</button>
+    <button  class="tabbutton" onclick="openchannel('day4', this)">@DateTime.Today.AddDays(3).Day/@DateTime.Today.Month</button>
+    <button  class="tabbutton" onclick="openchannel('day5', this)">@DateTime.Today.AddDays(4).Day/@DateTime.Today.Month</button>
+    <button  class="tabbutton" onclick="openchannel('day6', this)">@DateTime.Today.AddDays(5).Day/@DateTime.Today.Month</button>
+    <button  class="tabbutton" onclick="openchannel('day7', this)">@DateTime.Today.AddDays(6).Day/@DateTime.Today.Month</button>
+
+</div>
+<div id="day1" class="channel-cont">
+    @foreach (var channel in ViewBag.Channels)
+    {
+        <div class="list">
+            <h3 class="channel">@channel.name</h3>
+
+            @foreach (var program in Model)
+            {
+                if (channel.Id == program.channel_id && program.start.Value.Date == DateTime.Now.Date)
+                {
+                    if (program.start.Value.TimeOfDay <= DateTime.Now.TimeOfDay && program.finish.Value.TimeOfDay > DateTime.Now.TimeOfDay)
+                    {
+                        <ul class="channel-list">
+                            <li title="@program.programtype.type @program.genretype.type">
+                                <b>@program.start.Value.ToString("HH:mm") @program.name Live</b>
+                            </li>
+
+                        </ul>
+                    }
+                    else
+                    {
+
+                        <ul class="channel-list">
+                            <li title="@program.programtype.type @program.genretype.type">
+                                @program.start.Value.ToString("HH:mm") @program.name
+                            </li>
+
+                        </ul>
+                    }
+                }
+            }
+
+
+
+        </div>
+
+    } 
+</div>
+<div id="day2" class="channel-cont">
+    @foreach (var channel in ViewBag.Channels)
+    {
+        <div class="list">
+            <h3 class="channel">@channel.name</h3>
+
+            @foreach (var program in Model)
+            {
+                if (channel.Id == program.channel_id && program.start.Value.Date == DateTime.Now.Date.AddDays(1))
+                {
+                   
+
+                        <ul class="channel-list">
+                            <li title="@program.programtype.type @program.genretype.type">
+                                @program.start.Value.ToString("HH:mm") @program.name
+                            </li>
+
+                        </ul>
+                    
+                }
+            }
+
+
+
+        </div>
+
+    } 
+</div>
+<div id="day3" class="channel-cont">
+    @foreach (var channel in ViewBag.Channels)
+    {
+        <div class="list">
+            <h3 class="channel">@channel.name</h3>
+
+            @foreach (var program in Model)
+            {
+                if (channel.Id == program.channel_id && program.start.Value.Date == DateTime.Now.Date.AddDays(2))
+                {
+                    
+
+                        <ul class="channel-list">
+                            <li title="@program.programtype.type @program.genretype.type">
+                                @program.start.Value.ToString("HH:mm") @program.name
+                            </li>
+
+                        </ul>
+                    
+                }
+            }
+
+
+
+        </div>
+
+    } 
+</div>
+<div id="day4" class="channel-cont">
+    @foreach (var channel in ViewBag.Channels)
+    {
+        <div class="list">
+            <h3 class="channel">@channel.name</h3>
+
+            @foreach (var program in Model)
+            {
+                if (channel.Id == program.channel_id && program.start.Value.Date == DateTime.Now.Date.AddDays(3))
+                {
+                    
+
+                        <ul class="channel-list">
+                            <li title="@program.programtype.type @program.genretype.type">
+                                @program.start.Value.ToString("HH:mm") @program.name
+                            </li>
+
+                        </ul>
+                    
+                }
+            }
+
+
+
+        </div>
+
+    } 
+</div>
+<div id="day5" class="channel-cont">
+    @foreach (var channel in ViewBag.Channels)
+    {
+        <div class="list">
+            <h3 class="channel">@channel.name</h3>
+
+            @foreach (var program in Model)
+            {
+                if (channel.Id == program.channel_id && program.start.Value.Date == DateTime.Now.Date.AddDays(4))
+                {
+                    
+
+                        <ul class="channel-list">
+                            <li title="@program.programtype.type @program.genretype.type">
+                                @program.start.Value.ToString("HH:mm") @program.name
+                            </li>
+
+                        </ul>
+                    
+                }
+            }
+
+
+
+        </div>
+
+    } 
+</div>
+<div id="day6" class="channel-cont">
+    @foreach (var channel in ViewBag.Channels)
+    {
+        <div class="list">
+            <h3 class="channel">@channel.name</h3>
+
+            @foreach (var program in Model)
+            {
+                if (channel.Id == program.channel_id && program.start.Value.Date == DateTime.Now.Date.AddDays(5))
+                {
+                    
+
+                        <ul class="channel-list">
+                            <li title="@program.programtype.type @program.genretype.type">
+                                @program.start.Value.ToString("HH:mm") @program.name
+                            </li>
+
+                        </ul>
+                    
+                }
+            }
+
+
+
+        </div>
+
+    }
+</div>
+<div id="day7" class="channel-cont">
+    @foreach (var channel in ViewBag.Channels)
+    {
+        <div class="list">
+            <h3 class="channel">@channel.name</h3>
+
+            @foreach (var program in Model)
+            {
+                if (channel.Id == program.channel_id && program.start.Value.Date == DateTime.Now.Date.AddDays(6))
+                {
+                   
+                        <ul class="channel-list">
+                            <li title="@program.programtype.type @program.genretype.type">
+                                @program.start.Value.ToString("HH:mm") @program.name
+                            </li>
+
+                        </ul>
+                    
+                }
+            }
+
+
+
+        </div>
+
+    }
+</div>
+
+
+<script type="text/javascript">
+        // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+
+</script>

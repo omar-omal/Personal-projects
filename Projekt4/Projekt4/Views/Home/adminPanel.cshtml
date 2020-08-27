@@ -1,0 +1,28 @@
+﻿@model Projekt4.Models.db.news
+@{
+    ViewBag.Title = "adminPanel";
+}
+
+<div id="adminPanel-cont">
+    <h3>Lägga till nyheter</h3>
+    @using (Html.BeginForm("adminPanel", "Home", FormMethod.Post))
+    {
+        @Html.LabelFor(model => model.channel_id)
+        @Html.DropDownListFor(x => x.channel_id, new SelectList(ViewBag.programList, "Value", "Text"))
+
+        @Html.LabelFor(model => model.director)
+        @Html.EditorFor(model => model.director)
+
+        @Html.LabelFor(model => model.actors)
+        @Html.EditorFor(model => model.actors)<br />
+     
+        @Html.LabelFor(model => model.information)
+        @Html.TextAreaFor(model => model.information)
+
+        <input type="submit" id="btnadminPanel" value="Insert" />
+    }
+</div>
+<div class="AddChannels">
+    <input type="button" value="Redigera" onclick="location.href='@Url.Action("Index", "news")'" />
+
+</div>

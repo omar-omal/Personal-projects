@@ -1,0 +1,102 @@
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\ApplicationInsights.config
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\roslyn\csc.exe
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\roslyn\System.Collections.Immutable.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\roslyn\System.Reflection.Metadata.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\roslyn\vbc.exe
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\roslyn\VBCSCompiler.exe
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\roslyn\VBCSCompiler.exe.config
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Projekt4.dll.config
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Projekt4.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Projekt4.pdb
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\EntityFramework.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\EntityFramework.SqlServer.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Microsoft.AI.DependencyCollector.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Microsoft.AI.Web.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Microsoft.AI.WindowsServer.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Microsoft.ApplicationInsights.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Microsoft.Web.Infrastructure.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\System.Web.Helpers.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\System.Web.Mvc.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\System.Web.Razor.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\System.Web.Webpages.Deployment.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\System.Web.Webpages.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\System.Web.Webpages.Razor.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\EntityFramework.xml
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\EntityFramework.SqlServer.xml
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Microsoft.AI.DependencyCollector.xml
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Microsoft.AI.Web.xml
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Microsoft.AI.WindowsServer.xml
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Microsoft.ApplicationInsights.xml
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\System.Web.Razor.xml
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\System.Web.Webpages.xml
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\System.Web.Webpages.Deployment.xml
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\System.Web.Webpages.Razor.xml
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\System.Web.Helpers.xml
+E:\Uni 2017\repo\Projekt4\Projekt4\bin\System.Web.Mvc.xml
+E:\Uni 2017\repo\Projekt4\Projekt4\obj\Debug\Projekt4.csprojResolveAssemblyReference.cache
+E:\Uni 2017\repo\Projekt4\Projekt4\obj\Debug\Projekt4.dll
+E:\Uni 2017\repo\Projekt4\Projekt4\obj\Debug\Projekt4.pdb
+D:\Programing\Projekt4\Projekt4\bin\ApplicationInsights.config
+D:\Programing\Projekt4\Projekt4\bin\roslyn\csc.exe
+D:\Programing\Projekt4\Projekt4\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Programing\Projekt4\Projekt4\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Programing\Projekt4\Projekt4\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Programing\Projekt4\Projekt4\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Programing\Projekt4\Projekt4\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Programing\Projekt4\Projekt4\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Programing\Projekt4\Projekt4\bin\roslyn\System.Collections.Immutable.dll
+D:\Programing\Projekt4\Projekt4\bin\roslyn\System.Reflection.Metadata.dll
+D:\Programing\Projekt4\Projekt4\bin\roslyn\vbc.exe
+D:\Programing\Projekt4\Projekt4\bin\roslyn\VBCSCompiler.exe
+D:\Programing\Projekt4\Projekt4\bin\roslyn\VBCSCompiler.exe.config
+D:\Programing\Projekt4\Projekt4\bin\Projekt4.dll.config
+D:\Programing\Projekt4\Projekt4\bin\Projekt4.dll
+D:\Programing\Projekt4\Projekt4\bin\Projekt4.pdb
+D:\Programing\Projekt4\Projekt4\bin\EntityFramework.dll
+D:\Programing\Projekt4\Projekt4\bin\EntityFramework.SqlServer.dll
+D:\Programing\Projekt4\Projekt4\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Programing\Projekt4\Projekt4\bin\Microsoft.AI.DependencyCollector.dll
+D:\Programing\Projekt4\Projekt4\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Programing\Projekt4\Projekt4\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Programing\Projekt4\Projekt4\bin\Microsoft.AI.Web.dll
+D:\Programing\Projekt4\Projekt4\bin\Microsoft.AI.WindowsServer.dll
+D:\Programing\Projekt4\Projekt4\bin\Microsoft.ApplicationInsights.dll
+D:\Programing\Projekt4\Projekt4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Programing\Projekt4\Projekt4\bin\Microsoft.Web.Infrastructure.dll
+D:\Programing\Projekt4\Projekt4\bin\System.Web.Helpers.dll
+D:\Programing\Projekt4\Projekt4\bin\System.Web.Mvc.dll
+D:\Programing\Projekt4\Projekt4\bin\System.Web.Razor.dll
+D:\Programing\Projekt4\Projekt4\bin\System.Web.Webpages.Deployment.dll
+D:\Programing\Projekt4\Projekt4\bin\System.Web.Webpages.dll
+D:\Programing\Projekt4\Projekt4\bin\System.Web.Webpages.Razor.dll
+D:\Programing\Projekt4\Projekt4\bin\EntityFramework.xml
+D:\Programing\Projekt4\Projekt4\bin\EntityFramework.SqlServer.xml
+D:\Programing\Projekt4\Projekt4\bin\Microsoft.AI.DependencyCollector.xml
+D:\Programing\Projekt4\Projekt4\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Programing\Projekt4\Projekt4\bin\Microsoft.AI.Web.xml
+D:\Programing\Projekt4\Projekt4\bin\Microsoft.AI.WindowsServer.xml
+D:\Programing\Projekt4\Projekt4\bin\Microsoft.ApplicationInsights.xml
+D:\Programing\Projekt4\Projekt4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Programing\Projekt4\Projekt4\bin\System.Web.Razor.xml
+D:\Programing\Projekt4\Projekt4\bin\System.Web.Webpages.xml
+D:\Programing\Projekt4\Projekt4\bin\System.Web.Webpages.Deployment.xml
+D:\Programing\Projekt4\Projekt4\bin\System.Web.Webpages.Razor.xml
+D:\Programing\Projekt4\Projekt4\bin\System.Web.Helpers.xml
+D:\Programing\Projekt4\Projekt4\bin\System.Web.Mvc.xml
+D:\Programing\Projekt4\Projekt4\obj\Debug\Projekt4.csprojAssemblyReference.cache
+D:\Programing\Projekt4\Projekt4\obj\Debug\Projekt4.csproj.CoreCompileInputs.cache
+D:\Programing\Projekt4\Projekt4\obj\Debug\Projekt4.csproj.CopyComplete
+D:\Programing\Projekt4\Projekt4\obj\Debug\Projekt4.dll
+D:\Programing\Projekt4\Projekt4\obj\Debug\Projekt4.pdb

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Interaktiva_gAModelStoreContainer" CdmEntityContainer="Interaktiva_gAEntities">
+    <EntitySetMapping Name="account">
+      <EntityTypeMapping TypeName="Interaktiva_gAModel.account">
+        <MappingFragment StoreEntitySet="account">
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="admin" ColumnName="admin" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="channel">
+      <EntityTypeMapping TypeName="Interaktiva_gAModel.channel">
+        <MappingFragment StoreEntitySet="channel">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="favorite">
+      <EntityTypeMapping TypeName="Interaktiva_gAModel.favorite">
+        <MappingFragment StoreEntitySet="favorite">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="channel_id" ColumnName="channel_id" />
+          <ScalarProperty Name="account_id" ColumnName="account_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="genretype">
+      <EntityTypeMapping TypeName="Interaktiva_gAModel.genretype">
+        <MappingFragment StoreEntitySet="genretype">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="news">
+      <EntityTypeMapping TypeName="Interaktiva_gAModel.news">
+        <MappingFragment StoreEntitySet="news">
+          <ScalarProperty Name="information" ColumnName="information" />
+          <ScalarProperty Name="director" ColumnName="director" />
+          <ScalarProperty Name="actors" ColumnName="actors" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="channel_id" ColumnName="channel_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="program">
+      <EntityTypeMapping TypeName="Interaktiva_gAModel.program">
+        <MappingFragment StoreEntitySet="program">
+          <ScalarProperty Name="channel_id" ColumnName="channel_id" />
+          <ScalarProperty Name="programtype_id" ColumnName="programtype_id" />
+          <ScalarProperty Name="genre_id" ColumnName="genre_id" />
+          <ScalarProperty Name="start" ColumnName="start" />
+          <ScalarProperty Name="finish" ColumnName="finish" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="programtype">
+      <EntityTypeMapping TypeName="Interaktiva_gAModel.programtype">
+        <MappingFragment StoreEntitySet="programtype">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

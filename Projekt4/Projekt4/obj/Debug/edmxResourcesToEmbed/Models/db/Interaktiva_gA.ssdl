@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Interaktiva_gAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="firstname" Type="nchar" MaxLength="50" />
+    <Property Name="lastname" Type="nchar" MaxLength="50" />
+    <Property Name="email" Type="nchar" MaxLength="50" />
+    <Property Name="username" Type="nchar" MaxLength="50" />
+    <Property Name="password" Type="nchar" MaxLength="50" />
+    <Property Name="admin" Type="int" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="channel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="favorite">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="channel_id" Type="int" />
+    <Property Name="account_id" Type="int" />
+  </EntityType>
+  <EntityType Name="genretype">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="type" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="news">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="information" Type="varchar(max)" />
+    <Property Name="director" Type="nchar" MaxLength="50" />
+    <Property Name="actors" Type="nchar" MaxLength="50" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="channel_id" Type="int" />
+  </EntityType>
+  <EntityType Name="program">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="channel_id" Type="int" />
+    <Property Name="programtype_id" Type="int" />
+    <Property Name="genre_id" Type="int" />
+    <Property Name="start" Type="datetime" />
+    <Property Name="finish" Type="datetime" />
+    <Property Name="name" Type="nchar" MaxLength="50" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="programtype">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="type" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="channel_id">
+    <End Role="channel" Type="Self.channel" Multiplicity="0..1" />
+    <End Role="favorite" Type="Self.favorite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="channel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="favorite">
+        <PropertyRef Name="channel_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_account_id">
+    <End Role="account" Type="Self.account" Multiplicity="0..1" />
+    <End Role="favorite" Type="Self.favorite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="account">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="favorite">
+        <PropertyRef Name="account_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_channel_id">
+    <End Role="channel" Type="Self.channel" Multiplicity="0..1" />
+    <End Role="program" Type="Self.program" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="channel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="program">
+        <PropertyRef Name="channel_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_genre_id">
+    <End Role="genretype" Type="Self.genretype" Multiplicity="0..1" />
+    <End Role="program" Type="Self.program" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="genretype">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="program">
+        <PropertyRef Name="genre_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_id_program">
+    <End Role="program" Type="Self.program" Multiplicity="0..1" />
+    <End Role="news" Type="Self.news" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="program">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="news">
+        <PropertyRef Name="channel_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_program_id">
+    <End Role="programtype" Type="Self.programtype" Multiplicity="0..1" />
+    <End Role="program" Type="Self.program" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="programtype">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="program">
+        <PropertyRef Name="programtype_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Interaktiva_gAModelStoreContainer">
+    <EntitySet Name="account" EntityType="Self.account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="channel" EntityType="Self.channel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="favorite" EntityType="Self.favorite" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="genretype" EntityType="Self.genretype" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="news" EntityType="Self.news" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="program" EntityType="Self.program" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="programtype" EntityType="Self.programtype" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="channel_id" Association="Self.channel_id">
+      <End Role="channel" EntitySet="channel" />
+      <End Role="favorite" EntitySet="favorite" />
+    </AssociationSet>
+    <AssociationSet Name="FK_account_id" Association="Self.FK_account_id">
+      <End Role="account" EntitySet="account" />
+      <End Role="favorite" EntitySet="favorite" />
+    </AssociationSet>
+    <AssociationSet Name="FK_channel_id" Association="Self.FK_channel_id">
+      <End Role="channel" EntitySet="channel" />
+      <End Role="program" EntitySet="program" />
+    </AssociationSet>
+    <AssociationSet Name="FK_genre_id" Association="Self.FK_genre_id">
+      <End Role="genretype" EntitySet="genretype" />
+      <End Role="program" EntitySet="program" />
+    </AssociationSet>
+    <AssociationSet Name="FK_id_program" Association="Self.FK_id_program">
+      <End Role="program" EntitySet="program" />
+      <End Role="news" EntitySet="news" />
+    </AssociationSet>
+    <AssociationSet Name="FK_program_id" Association="Self.FK_program_id">
+      <End Role="programtype" EntitySet="programtype" />
+      <End Role="program" EntitySet="program" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

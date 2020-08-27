@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Projekt4.Models.db.news>
+
+@{
+    ViewBag.Title = "Redigera Nyheter";
+}
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.information)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.director)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.actors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.program.name)
+        </th>
+        <th></th>
+    </tr>
+  
+    
+@foreach (var item in Model)
+{
+        <tr>
+            <td>
+                <span class="information-style">  @Html.DisplayFor(modelItem => item.information)</span> 
+            </td>
+            <td>
+                <span class="information-style">  @Html.DisplayFor(modelItem => item.director)</span>
+            </td>
+            <td>
+                <span class="information-style">  @Html.DisplayFor(modelItem => item.actors)</span>
+            </td>
+            <td>
+                <span class="information-style">  @Html.DisplayFor(modelItem => item.program.name)</span>
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+}
+ 
+
+</table>

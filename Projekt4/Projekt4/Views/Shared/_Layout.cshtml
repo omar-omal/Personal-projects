@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="~/scripts/MyJavaScript.js"></script>
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>*@
+</head>
+<body>
+
+    <header>
+        <a href="#" id="logo"><img src="img/Logo.png" /></a>
+
+        <nav id="menu">
+            <ul>
+                @if (Session["admin"] != null)
+                {
+                    <li class="current">@Html.ActionLink("Hem", "Index", "Home")</li>
+                    <li class="current">@Html.ActionLink("Min Sida", "minSida", "Home")</li>
+                    <li class="current">@Html.ActionLink("Redigera nyheter", "adminPanel", "Home")</li>
+                    <li class="current">@Html.ActionLink("Logga Ut", "Logout", "Login")</li>
+                }
+                else if (Session["id"] != null)
+                {
+                    <li class="current">@Html.ActionLink("Hem", "Index", "Home")</li>
+                    <li class="current">@Html.ActionLink("Min Sida", "minSida", "Home")</li>
+                    <li class="current">@Html.ActionLink("Logga Ut", "Logout", "Login")</li>
+                }
+                else
+                {
+                    <li class="current">@Html.ActionLink("Hem", "Index", "Home")</li>
+                    <li class="current">@Html.ActionLink("Registrera", "account", "Home")</li>
+                    <li class="current">@Html.ActionLink("Logga in", "Login", "Login")</li>
+                }
+            </ul>
+        </nav>
+     <div id="logeduser">
+         @if (Session["id"] != null)
+         {
+            <h2>
+               Loggat in som: @Session["firstname"]  @Session["lastname"]
+            </h2>
+         }
+
+     </div>
+        
+
+
+    </header>
+    
+    
+
+
+
+    <div class="row2">
+        @RenderBody()
+
+    </div>
+    <footer>
+        <div class="container">
+            <div class="social">
+                <h3>Följa oss på</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/" id="facebook"><img src="img/facebook.png" /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/accounts/login/" id="instagram"><img src="img/instagram.png" /></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/?lang=sv" id="twitter"><img src="img/twitter.png" /></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>Copyright © 2017 Sverige's TV</p>
+            </div>
+            <div class="text">
+                <h3> SAMARBETE</h3>
+                <p>
+
+                    tv.nu används i soffan framför stv och trafiken ökar upp till 800% under tv-reklampauserna. Med annonsering hos oss får ni räckvidd i en brusfri och ren annonsmiljö.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    @*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>*@
+</body>
+</html>

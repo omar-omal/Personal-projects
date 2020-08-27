@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e26e3094fcce40ffbc92a6556969a214" Name="Diagram1">
+        <EntityTypeShape EntityType="Interaktiva_gAModel.account" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Interaktiva_gAModel.channel" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Interaktiva_gAModel.favorite" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Interaktiva_gAModel.genretype" Width="1.5" PointX="3.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Interaktiva_gAModel.news" Width="1.5" PointX="8.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Interaktiva_gAModel.program" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Interaktiva_gAModel.programtype" Width="1.5" PointX="3.75" PointY="7.375" IsExpanded="true" />
+        <AssociationConnector Association="Interaktiva_gAModel.FK_account_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Interaktiva_gAModel.channel_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Interaktiva_gAModel.FK_channel_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Interaktiva_gAModel.FK_genre_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Interaktiva_gAModel.FK_id_program" ManuallyRouted="false" />
+        <AssociationConnector Association="Interaktiva_gAModel.FK_program_id" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

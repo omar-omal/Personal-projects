@@ -1,0 +1,8 @@
+﻿@model Projekt4.Models.db.favorite
+
+@using (Html.BeginForm("channelList", "Home", FormMethod.Post))
+{
+    
+@Html.DropDownListFor(x => x.channel_id, new SelectList(ViewBag.AddChannels, "Value", "Text"))
+<input type="submit" value="Lägg till" id="addchannels" />
+}

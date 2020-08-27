@@ -1,0 +1,23 @@
+
+
+
+ 
+
+<h2 class="text-center">Authors list</h2>
+
+<form action="/author" method="GET">
+<input type="text" name="name" value="<%= %>">
+<button  type="submit">Search</button>
+</form>
+
+<% author.forEach(author => { %>
+<div class="col-sm-8 mb-3">
+    First name:  <%= author.name %> <br>Last name: <%= author.lastName %> <br>Add at<%=author.createdAt%> 
+</div>
+
+<% }) %>
+
+
+
+
+<button class="btn btn-parimary"><a href="/author/new">Add new Author</a></button>
