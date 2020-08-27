@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
+const methodoverride = require('method-override')
 //The routes are being linked to the correct routing file
 const indexRouter = require('./routes/index')
 const authorsRouter = require('./routes/authors')
@@ -12,7 +13,7 @@ const authorsRouter = require('./routes/authors')
 app.use(express.static('public'))
 app.use(expressLayouts)
 app.use(bodyParser.urlencoded({extended: false}))
-
+app.use(methodoverride('_method'))
 //Set the type of viewengine which is ejs
 app.set('view engine', 'ejs') 
 

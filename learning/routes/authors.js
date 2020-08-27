@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
 
 router.get('/new', (req, res)=>{
 
-    res.render('author/add')
+    res.render('author/new')
 })
 
 router.post('/', (req, res,doc)=>{
@@ -45,6 +45,33 @@ router.post('/', (req, res,doc)=>{
     }
         
     
+})
+
+
+//show author window
+router.get('/:id', (req, res)=>{
+
+    res.send('Show author' + req.params.id)
+})
+
+
+
+//show edit window
+router.get('/:id/edit', (req, res)=>{
+
+    res.send('Edit author' + req.params.id)
+})
+
+//update author
+router.put('/:id', (req, res)=>{
+
+    res.send('Update author' + req.params.id)
+})
+
+
+router.delete('/:id', (req, res)=>{
+
+    res.send('Delete author' + req.params.id)
 })
 
 
