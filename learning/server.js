@@ -4,7 +4,7 @@ const app = express()
 const expressLayouts = require('express-ejs-layouts')
 //The routes are being linked to the correct routing file
 const indexRouter = require('./routes/index')
-const authorRouter = require('./routes/author')
+const authorsRouter = require('./routes/authors')
 
 
 
@@ -36,7 +36,7 @@ db.once('open', () => console.log('Connected to Mongoose'))
 /*This is the first step in routing, the request is matched with 
 the correct route below then sent to the correct route*/
 app.use('/', indexRouter)
-app.use('/author', authorRouter)
+app.use('/authors', authorsRouter)
 
 
 

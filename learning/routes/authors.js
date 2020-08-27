@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     
     try {
         const fetchedAuthor= await Author.find(searchOptions)
-        res.render('authors',{author: fetchedAuthor})
+        res.render('author/index',{author: fetchedAuthor})
         
     } catch {
         
@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
 
 router.get('/new', (req, res)=>{
 
-    res.render('addauthor')
+    res.render('author/add')
 })
 
 router.post('/', (req, res,doc)=>{
@@ -39,7 +39,7 @@ router.post('/', (req, res,doc)=>{
         
         const author = new Author({name: req.body.name, lastName: req.body.lastname})
         author.save()
-        res.redirect('author')
+        res.redirect('authors')
     } catch (error) {
         console.log(error)
     }
