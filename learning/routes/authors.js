@@ -68,15 +68,36 @@ router.get('/:id', async (req, res)=>{
 
 
 //show edit window
-router.get('/:id/edit', (req, res)=>{
+router.get('/:id/edit', async (req, res)=>{
+    try {
+            const author = await Author.findById(req.params.id)
+            res.render('author/edit', {author: author})
 
-    res.send('Edit author' + req.params.id)
+    } catch {
+        res.redirect('/authors')
+    }
+    //res.send('Edit author' + req.params.id)
 })
 
 //update author
-router.put('/:id', (req, res)=>{
+router.put('/:id', async (req, res)=>{
 
-    res.send('Update author' + req.params.id)
+    let author
+    try {
+        
+        author = await Author.findById(req.params.id)
+        author.name = req.body.name
+        author.lastName = req.body.lastName
+        await author.save()
+        res.redirect('/authors')
+    } catch{
+        if (author == null) {
+            
+            res.redirect('/')
+        } 
+    } 
+
+    //res.send('Update author' + req.params.id)
 })
 
 
