@@ -6,7 +6,7 @@ const methodoverride = require('method-override')
 //The routes are being linked to the correct routing file
 const indexRouter = require('./routes/index')
 const authorsRouter = require('./routes/authors')
-
+const booksRouter = require('./routes/books')
 
 
 
@@ -38,6 +38,7 @@ db.once('open', () => console.log('Connected to Mongoose'))
 the correct route below then sent to the correct route*/
 app.use('/', indexRouter)
 app.use('/authors', authorsRouter)
+app.use('/books', booksRouter)
 
 
 

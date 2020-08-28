@@ -1,0 +1,8 @@
+<h1 class="text-center">Books list</h1>
+
+<% book.forEach(book => { %>
+    <div class="col-sm-8 mb-3 text-center">
+      <h4>Title:</h4>  <%=book.name %> <br> <h4>Type: </h4><%= book.type %>  
+    </div>
+    
+<% }) %>
