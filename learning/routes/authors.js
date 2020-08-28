@@ -29,16 +29,21 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/new', (req, res)=>{
-
-    res.render('author/new')
+    try {
+        
+        res.render('author/new')
+    } catch (error) {
+        res.redirect('/')
+        console.log(error)
+    }
 })
 
-router.post('/', (req, res,doc)=>{
+router.post('/', async (req, res,doc)=>{
     try {
         console.log(req.body)
         
         const author = new Author({name: req.body.name, lastName: req.body.lastname})
-        author.save()
+        await author.save()
         res.redirect('authors')
     } catch (error) {
         console.log(error)
@@ -49,10 +54,16 @@ router.post('/', (req, res,doc)=>{
 
 
 //show author window
-router.get('/:id', (req, res)=>{
-
-    res.send('Show author' + req.params.id)
-})
+router.get('/:id', async (req, res)=>{
+    try {
+        const author = await Author.findById(req.params.id)
+        res.render('author/show', {author: author})
+        
+    } catch (error) {
+        res.redirect('/')
+    }
+    //res.send('Show author' + req.params.id)
+})  
 
 
 
