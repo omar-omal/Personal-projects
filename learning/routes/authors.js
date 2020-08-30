@@ -19,6 +19,7 @@ router.get('/', async (req, res) => {
     
     try {
         const fetchedAuthor= await Author.find(searchOptions)
+        //console.log(fetchedAuthor)
         res.render('author/index',{author: fetchedAuthor})
         
     } catch {
@@ -38,11 +39,16 @@ router.get('/new', (req, res)=>{
     }
 })
 
-router.post('/', async (req, res,doc)=>{
+router.post('/', async (req, res)=>{
     try {
         console.log(req.body)
+        let hasValue = req.body.hasBooks
+        let checked
+        if (hasValue == 'on') {
+            checked = true
+        }
+        const author = new Author({name: req.body.name, lastName: req.body.lastname, hasBooks: checked})
         
-        const author = new Author({name: req.body.name, lastName: req.body.lastname})
         await author.save()
         res.redirect('authors')
     } catch (error) {
@@ -84,10 +90,16 @@ router.put('/:id', async (req, res)=>{
 
     let author
     try {
-        
+        let hasValue = req.body.hasBooks
+        let checked
+        if (hasValue == 'on') {
+            checked = true
+        }
+        console.log(req.body)
         author = await Author.findById(req.params.id)
         author.name = req.body.name
         author.lastName = req.body.lastName
+        author.hasBooks = checked
         await author.save()
         res.redirect('/authors')
     } catch{

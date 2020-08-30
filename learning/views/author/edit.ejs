@@ -1,8 +1,19 @@
 <form action="/authors/<%=author.id %>?_method=PUT " method="POST">
 
-<title>Name</title>
+<label>Name</label>
 <input type="text" name="name" value="<%=  author.name%> ">
+<label>Last Name</label>
 <input type="text" name="lastName" value="<%=  author.lastName%> ">
+
+
+<% if (author.hasBooks == true) { %>
+     
+    Has books: <input class="form-control" type="checkbox" name="hasBooks" checked ><br>
+    <% }else {  %>
+        
+    Has books: <input class="form-control" type="checkbox" name="hasBooks"><br>
+   
+<% }  %>
 <button type="submit">Update</button>
 <button><a href="/authors">Cancle</a></button>
 </form>

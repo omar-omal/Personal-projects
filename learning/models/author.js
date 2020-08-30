@@ -1,9 +1,10 @@
 const mongoose = require('mongoose')
 
 const authorSchema = new mongoose.Schema({
-    name:String,
-    lastName:String,
-    createdAt:Date
+    name:{type:String},
+    lastName:{type:String},
+    createdAt:{type:Date},
+    hasBooks: {type: Boolean, default:false}
 
 })
 authorSchema.pre('save', function(next){

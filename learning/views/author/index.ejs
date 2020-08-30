@@ -12,7 +12,20 @@
 
 <% author.forEach(author => { %>
 <div class="col-sm-8 mb-3">
-    First name:  <%= author.name %> <br>Last name: <%= author.lastName %> <br>Add at<%=author.createdAt%> <a href="authors/<%=author.id %> ">Show</a>
+    First name:  <%= author.name %> <br>
+    Last name: <%= author.lastName %> <br>
+    Added at: <%=author.createdAt%> <br>
+    <% if (author.hasBooks == true) { %>
+     
+        Has books: <input type="checkbox" checked disabled><br>
+        <% }else {  %>
+            
+        Has books: <input type="checkbox" disabled><br>
+       
+    <% }  %>
+ 
+     
+    <a href="authors/<%=author.id %> ">Show</a>
     <a href="authors/<%=author.id %>/edit ">Edit</a>
     <form method="POST" action="authors/<%= author.id %>?_method=DELETE ">
     <button type="submit">Delete</button>
