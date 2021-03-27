@@ -89,6 +89,7 @@ namespace CarBooking
             this.categoryComboBox.Name = "categoryComboBox";
             this.categoryComboBox.Size = new System.Drawing.Size(121, 23);
             this.categoryComboBox.TabIndex = 4;
+            this.categoryComboBox.SelectedIndexChanged += new System.EventHandler(this.categoryComboBox_SelectedIndexChanged);
             // 
             // label2
             // 

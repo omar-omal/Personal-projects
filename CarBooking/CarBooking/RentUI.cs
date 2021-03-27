@@ -14,6 +14,7 @@ namespace CarBooking
     public partial class RentUI : Form
     {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-H8LFMTP;Initial Catalog=RentalCars;Integrated Security=True");
+        int carCategory;
          
         public RentUI()
         {
@@ -29,14 +30,16 @@ namespace CarBooking
             //cmd.ExecuteNonQuery();
             //con.Close();
 
-            string query = "INSERT INTO dbo.CarRent (CategoryId, PersonNumber, Date,Distance) VALUES ('1', @personNumber, @currentDate,@distanceReading);";
-            int personNumber = int.Parse(personTextBox.Text);
+            string query = "INSERT INTO dbo.CarRent (CategoryId, PersonNumber, Date_before,DistanceCounter_before) VALUES (@carCategory, @personNumber, @currentDate,@distanceReading);";
+            string personNumber = personTextBox.Text;
             string distanceReading = distanceTextbox.Text;
+            
             DateTime currentDate = DateTime.Now;
 
 
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@carCategory", carCategory);
             cmd.Parameters.AddWithValue("@personNumber", personNumber);
             cmd.Parameters.AddWithValue("@currentDate", currentDate);
             cmd.Parameters.AddWithValue("@distanceReading", distanceReading);
@@ -60,6 +63,12 @@ namespace CarBooking
             categoryComboBox.ValueMember = "Name";
             categoryComboBox.DataSource = dataTable;
             con.Close();
+        }
+
+        private void categoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            carCategory = categoryComboBox.SelectedIndex + 1;
+
         }
     }
 }
