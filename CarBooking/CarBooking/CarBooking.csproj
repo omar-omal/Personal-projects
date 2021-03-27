@@ -10,4 +10,10 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Update="RentUI - Copy.resx">
+      <DependentUpon>RentUI.resx</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

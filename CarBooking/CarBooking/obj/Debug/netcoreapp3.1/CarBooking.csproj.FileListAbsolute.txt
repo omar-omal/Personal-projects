@@ -20,3 +20,4 @@ C:\Users\Darth Omar\Documents\GitHub\Personal-projects\CarBooking\CarBooking\bin
 C:\Users\Darth Omar\Documents\GitHub\Personal-projects\CarBooking\CarBooking\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Darth Omar\Documents\GitHub\Personal-projects\CarBooking\CarBooking\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Darth Omar\Documents\GitHub\Personal-projects\CarBooking\CarBooking\obj\Debug\netcoreapp3.1\CarBooking.csproj.CopyComplete
+C:\Users\Darth Omar\Documents\GitHub\Personal-projects\CarBooking\CarBooking\obj\Debug\netcoreapp3.1\CarBooking.RentUI - Copy.resources
