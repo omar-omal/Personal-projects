@@ -29,7 +29,7 @@ namespace CarBooking
             string personNumber = personTextBox.Text;
             string distanceBefore = distanceTextbox.Text;
             dbContext.registerRent(carCategory, personNumber, distanceBefore);
-            RentUI.ActiveForm.Close();
+            Close();
         }
 
         private void RentUI_Load(object sender, EventArgs e)

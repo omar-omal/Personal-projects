@@ -17,7 +17,7 @@ namespace CarBooking
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RentUI());
+            Application.Run(new Menu());
         }
     }
 }
