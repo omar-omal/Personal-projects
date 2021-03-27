@@ -13,39 +13,23 @@ namespace CarBooking
 {
     public partial class RentUI : Form
     {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-H8LFMTP;Initial Catalog=RentalCars;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-H8LFMTP;Initial Catalog=RentalCars;Integrated Security=True");
+        dbContext dbContext = new dbContext();
         int carCategory;
-         
+
         public RentUI()
         {
-            
+
             InitializeComponent();
         }
 
         private void registerBTN_Click(object sender, EventArgs e)
         {
-            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-H8LFMTP;Initial Catalog=RentalCars;Integrated Security=True");
-            //con.Open();
-            //SqlCommand cmd = new SqlCommand("INSERT INTO dbo.CarRent (CategoryId, PersonNumber, Date,Distance) VALUES ('1', '9009037517', '2019-03-09 00:00','5000');", con);
-            //cmd.ExecuteNonQuery();
-            //con.Close();
-
-            string query = "INSERT INTO dbo.CarRent (CategoryId, PersonNumber, Date_before,DistanceCounter_before) VALUES (@carCategory, @personNumber, @currentDate,@distanceReading);";
-            string personNumber = personTextBox.Text;
-            string distanceReading = distanceTextbox.Text;
             
-            DateTime currentDate = DateTime.Now;
-
-
-            con.Open();
-            SqlCommand cmd = new SqlCommand(query, con);
-            cmd.Parameters.AddWithValue("@carCategory", carCategory);
-            cmd.Parameters.AddWithValue("@personNumber", personNumber);
-            cmd.Parameters.AddWithValue("@currentDate", currentDate);
-            cmd.Parameters.AddWithValue("@distanceReading", distanceReading);
-            cmd.ExecuteNonQuery();
-            con.Close();
-
+            string personNumber = personTextBox.Text;
+            string distanceBefore = distanceTextbox.Text;
+            dbContext.registerRent(carCategory, personNumber, distanceBefore);
+            this.
         }
 
         private void RentUI_Load(object sender, EventArgs e)
