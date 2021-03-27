@@ -13,6 +13,7 @@ namespace CarBooking
 {
     public partial class RentUI : Form
     {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-H8LFMTP;Initial Catalog=RentalCars;Integrated Security=True");
          
         public RentUI()
         {
@@ -27,12 +28,13 @@ namespace CarBooking
             //SqlCommand cmd = new SqlCommand("INSERT INTO dbo.CarRent (CategoryId, PersonNumber, Date,Distance) VALUES ('1', '9009037517', '2019-03-09 00:00','5000');", con);
             //cmd.ExecuteNonQuery();
             //con.Close();
+
             string query = "INSERT INTO dbo.CarRent (CategoryId, PersonNumber, Date,Distance) VALUES ('1', @personNumber, @currentDate,@distanceReading);";
             int personNumber = int.Parse(personTextBox.Text);
             string distanceReading = distanceTextbox.Text;
             DateTime currentDate = DateTime.Now;
 
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-H8LFMTP;Initial Catalog=RentalCars;Integrated Security=True");
+
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.Parameters.AddWithValue("@personNumber", personNumber);
@@ -41,6 +43,23 @@ namespace CarBooking
             cmd.ExecuteNonQuery();
             con.Close();
 
+        }
+
+        private void RentUI_Load(object sender, EventArgs e)
+        {
+
+            //Display data into combobox
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * from dbo.Category;", con);
+            SqlDataReader sqlDataReader;
+            sqlDataReader = cmd.ExecuteReader();
+
+            DataTable dataTable = new DataTable();
+            dataTable.Load(sqlDataReader);
+
+            categoryComboBox.ValueMember = "Name";
+            categoryComboBox.DataSource = dataTable;
+            con.Close();
         }
     }
 }
