@@ -19,7 +19,7 @@ namespace CarBooking
         private void button1_Click(object sender, EventArgs e)
         {
             string personNumber = txtboxPersonNumber.Text;
-            string distanceAfter = txtboxDistance.Text;
+            int distanceAfter = int.Parse(txtboxDistance.Text);
 
             //Insert and modify  distanceAfter + dateAfter
             dbContext.returnCar(personNumber, distanceAfter);

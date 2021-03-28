@@ -27,8 +27,9 @@ namespace CarBooking
         {
             
             string personNumber = personTextBox.Text;
-            string distanceBefore = distanceTextbox.Text;
+            int distanceBefore = int.Parse(distanceTextbox.Text);
             dbContext.registerRent(carCategory, personNumber, distanceBefore);
+            MessageBox.Show("Record added!");
             Close();
         }
 
