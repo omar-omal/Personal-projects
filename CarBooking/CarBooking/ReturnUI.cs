@@ -10,7 +10,7 @@ namespace CarBooking
 {
     public partial class ReturnUI : Form
     {
-        dbContext dbContext = new dbContext();
+        DbContext dbContext = new DbContext();
         public ReturnUI()
         {
             InitializeComponent();
@@ -25,7 +25,6 @@ namespace CarBooking
             dbContext.returnCar(personNumber, distanceAfter);
 
             //Return price
-            //dbContext.calculateRentCost(personNumber);
             MessageBox.Show("Kostnaden är: " + dbContext.calculateRentCost(personNumber) + "kr");
 
             Close();

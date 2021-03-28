@@ -14,7 +14,7 @@ namespace CarBooking
     public partial class RentUI : Form
     {
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-H8LFMTP;Initial Catalog=RentalCars;Integrated Security=True");
-        dbContext dbContext = new dbContext();
+        DbContext dbContext = new DbContext();
         int carCategory;
 
         public RentUI()

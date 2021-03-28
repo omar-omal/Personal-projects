@@ -37,7 +37,7 @@ namespace CarBooking
             // 
             this.btnReturnCar.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnReturnCar.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnReturnCar.Location = new System.Drawing.Point(235, 98);
+            this.btnReturnCar.Location = new System.Drawing.Point(226, 75);
             this.btnReturnCar.Name = "btnReturnCar";
             this.btnReturnCar.Size = new System.Drawing.Size(117, 43);
             this.btnReturnCar.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace CarBooking
             // 
             this.btnRentCar.BackColor = System.Drawing.Color.ForestGreen;
             this.btnRentCar.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnRentCar.Location = new System.Drawing.Point(72, 98);
+            this.btnRentCar.Location = new System.Drawing.Point(63, 75);
             this.btnRentCar.Name = "btnRentCar";
             this.btnRentCar.Size = new System.Drawing.Size(117, 43);
             this.btnRentCar.TabIndex = 1;
@@ -61,7 +61,7 @@ namespace CarBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 259);
+            this.ClientSize = new System.Drawing.Size(409, 211);
             this.Controls.Add(this.btnRentCar);
             this.Controls.Add(this.btnReturnCar);
             this.Name = "Menu";
