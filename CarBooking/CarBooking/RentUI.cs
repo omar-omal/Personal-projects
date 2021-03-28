@@ -29,7 +29,7 @@ namespace CarBooking
             string personNumber = personTextBox.Text;
             int distanceBefore = int.Parse(distanceTextbox.Text);
             dbContext.registerRent(carCategory, personNumber, distanceBefore);
-            MessageBox.Show("Record added!");
+            MessageBox.Show("Uthyrningen är registrerad!");
             Close();
         }
 

@@ -103,6 +103,7 @@ namespace CarBooking
             this.ClientSize = new System.Drawing.Size(409, 211);
             this.Controls.Add(this.groupBox1);
             this.Name = "ReturnUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReturnUI";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
