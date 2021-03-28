@@ -16,7 +16,7 @@ namespace CarBooking
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnReturnCar_Click(object sender, EventArgs e)
         {
             string personNumber = txtboxPersonNumber.Text;
             int distanceAfter = int.Parse(txtboxDistance.Text);
@@ -24,9 +24,9 @@ namespace CarBooking
             //Insert and modify  distanceAfter + dateAfter
             dbContext.returnCar(personNumber, distanceAfter);
 
-            //Return NumberOfDays, NumberOfKM and Category
-
-
+            //Return price
+            //dbContext.calculateRentCost(personNumber);
+            MessageBox.Show("Kostnaden är: " + dbContext.calculateRentCost(personNumber));
 
             Close();
         }

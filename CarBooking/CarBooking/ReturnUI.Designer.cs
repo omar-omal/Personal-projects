@@ -60,7 +60,7 @@ namespace CarBooking
             this.btnReturnCar.TabIndex = 2;
             this.btnReturnCar.Text = "Återlämna";
             this.btnReturnCar.UseVisualStyleBackColor = true;
-            this.btnReturnCar.Click += new System.EventHandler(this.button1_Click);
+            this.btnReturnCar.Click += new System.EventHandler(this.btnReturnCar_Click);
             // 
             // label2
             // 
