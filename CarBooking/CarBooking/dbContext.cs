@@ -47,7 +47,7 @@ namespace CarBooking
             modifyRentStatus(personNumber, 0);
         }
 
-
+        //Calculates cost based on registered records
         public decimal calculateRentCost(string personNumber)
         {
             string carCategory = "";
@@ -99,16 +99,32 @@ namespace CarBooking
             }
             else
             {
-
                 return price = 0;
             }
         }
 
-        //public void getRentCount()
-        //{
+        //Returns bool value true if user has active rents
+        public bool isRented(string personNumber)
+        {
+            int count=0;
+            string query = "SELECT COUNT(*) FROM dbo.CarRent WHERE PersonNumber = @personNumber AND IsRented = 1;";
 
-        //}
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@personNumber", personNumber);
+            count = (int)cmd.ExecuteScalar();
+            con.Close();
+            if (count >=1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
+        //Modify the status of the isRented boolean 
         private void modifyRentStatus(string personNumber, int isRented)
         {
             string query = "UPDATE dbo.CarRent SET IsRented=@isRented WHERE PersonNumber=@personNumber;";

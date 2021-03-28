@@ -28,8 +28,14 @@ namespace CarBooking
             
             string personNumber = personTextBox.Text;
             int distanceBefore = int.Parse(distanceTextbox.Text);
-            dbContext.registerRent(carCategory, personNumber, distanceBefore);
-            MessageBox.Show("Uthyrningen är registrerad!");
+
+            if (!dbContext.isRented(personNumber))
+            {
+                dbContext.registerRent(carCategory, personNumber, distanceBefore);
+                MessageBox.Show("Uthyrningen är registrerad!");
+            }
+            
+            MessageBox.Show("Du har redan registrerat en uthyrning!");
             Close();
         }
 
