@@ -21,7 +21,7 @@ namespace CarBooking
             string personNumber = txtboxPersonNumber.Text;
             int distanceAfter = int.Parse(txtboxDistance.Text);
 
-            //Insert and modify  distanceAfter + dateAfter
+            //Insert and modify values distanceAfter and dateAfter
             dbContext.returnCar(personNumber, distanceAfter);
 
             //Return price
