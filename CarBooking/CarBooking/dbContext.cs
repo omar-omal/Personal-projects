@@ -65,7 +65,6 @@ namespace CarBooking
                 dateBefore = (DateTime)dataReader["Date_before"];
                 dateAfter = (DateTime)dataReader["Date_after"]; 
                 carCategory = dataReader["Name"].ToString();
-
             }
             con.Close();
 
@@ -97,8 +96,6 @@ namespace CarBooking
             return price = 0;
             }
         }
-
-
 
     }
 }

@@ -26,7 +26,7 @@ namespace CarBooking
 
             //Return price
             //dbContext.calculateRentCost(personNumber);
-            MessageBox.Show("Kostnaden är: " + dbContext.calculateRentCost(personNumber));
+            MessageBox.Show("Kostnaden är: " + dbContext.calculateRentCost(personNumber) + "kr");
 
             Close();
         }
