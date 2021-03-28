@@ -10,9 +10,25 @@ namespace CarBooking
 {
     public partial class ReturnUI : Form
     {
+        dbContext dbContext = new dbContext();
         public ReturnUI()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string personNumber = txtboxPersonNumber.Text;
+            string distanceAfter = txtboxDistance.Text;
+
+            //Insert and modify  distanceAfter + dateAfter
+            dbContext.returnCar(personNumber, distanceAfter);
+
+            //Return NumberOfDays, NumberOfKM and Category
+
+
+
+            Close();
         }
     }
 }

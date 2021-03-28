@@ -25,7 +25,20 @@ namespace CarBooking
             con.Close();
         }
 
-      
+        public void returnCar(string personNumber, string distanceAfter)
+        {
+            string query = "UPDATE dbo.CarRent SET DistanceCounter_after=@distanceAfter, Date_after=@currentDate WHERE PersonNumber=@personNumber;";
+            DateTime currentDate = DateTime.Now;
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@distanceAfter", distanceAfter);
+            cmd.Parameters.AddWithValue("@personNumber", personNumber);
+            cmd.Parameters.AddWithValue("@currentDate", currentDate);
+
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
 
 
     }
