@@ -20,13 +20,18 @@ namespace CarBooking
         {
             string personNumber = txtboxPersonNumber.Text;
             int distanceAfter = int.Parse(txtboxDistance.Text);
+            if (dbContext.isRented(personNumber))
+            {
+                //Insert and modify values distanceAfter and dateAfter
+                dbContext.returnCar(personNumber, distanceAfter);
 
-            //Insert and modify values distanceAfter and dateAfter
-            dbContext.returnCar(personNumber, distanceAfter);
-
-            //Return price
-            MessageBox.Show("Kostnaden är: " + dbContext.calculateRentCost(personNumber) + "kr");
-
+                //Return price
+                MessageBox.Show("Kostnaden är: " + dbContext.calculateRentCost(personNumber) + "kr");
+            }
+            else
+            {
+                MessageBox.Show("Ingen uthyrningar hittades!");
+            }
             Close();
         }
     }

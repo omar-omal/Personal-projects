@@ -34,8 +34,10 @@ namespace CarBooking
                 dbContext.registerRent(carCategory, personNumber, distanceBefore);
                 MessageBox.Show("Uthyrningen är registrerad!");
             }
-            
-            MessageBox.Show("Du har redan registrerat en uthyrning!");
+            else
+            {
+                MessageBox.Show("Du har redan registrerat en uthyrning!");
+            }
             Close();
         }
 
