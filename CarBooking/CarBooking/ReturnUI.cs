@@ -30,7 +30,7 @@ namespace CarBooking
             }
             else
             {
-                MessageBox.Show("Ingen uthyrningar hittades!");
+                MessageBox.Show("Inga uthyrningar hittades!");
             }
             Close();
         }
